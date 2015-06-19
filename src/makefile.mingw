@@ -55,7 +55,8 @@ LIBS= \
  -lssl \
  -lcrypto \
  -lsecp256k1 \
- -lgmp
+ -lgmp \
+ -lz
 
 DEFS=-D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 DEBUGFLAGS=-g
@@ -130,10 +131,10 @@ OBJS_SSE2= obj/scrypt-sse2.o
 OBJS += $(OBJS_SSE2)
 endif
 
-all: vertcoind.exe
+all: ieurod.exe
 
-test check: test_vertcoin.exe FORCE
-	test_vertcoin.exe
+test check: test_ieuro.exe FORCE
+	test_ieuro.exe
 
 #
 # LevelDB support
@@ -153,7 +154,7 @@ obj/%.o: %.cpp $(HEADERS)
 Lyra2RE/%.o: Lyra2RE%.c $(HEADERS)
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
-vertcoind.exe: $(OBJS:obj/%=obj/%)
+ieurod.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -161,11 +162,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_vertcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_ieuro.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework$(BOOST_SUFFIX) $(LIBS)
     
 clean:
-	rm -f vertcoind.exe test_vertcoin.exe
+	rm -f ieurod.exe test_ieuro.exe
 	rm -f obj/*
 	rm -f Lyra2RE/*.o
 	rm -f obj-test/*

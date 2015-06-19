@@ -1,4 +1,4 @@
-Name Vertcoin
+Name iEuro
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,11 +6,11 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.9.0.2
-!define COMPANY "Vertcoin project"
-!define URL https://www.vertcoin.org/
+!define COMPANY "iEuro project"
+!define URL https://euros.international/
 
 # MUI Symbol Definitions
-!define MUI_ICON "../share/pixmaps/vertcoin.ico"
+!define MUI_ICON "../share/pixmaps/ieuro.ico"
 !define MUI_WELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
@@ -19,8 +19,8 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Vertcoin
-!define MUI_FINISHPAGE_RUN $INSTDIR\vertcoin-qt.exe
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER iEuro
+!define MUI_FINISHPAGE_RUN $INSTDIR\ieuro-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,8 +45,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile vertcoin-${VERSION}-win32-setup.exe
-InstallDir $PROGRAMFILES\Vertcoin
+OutFile ieuro-${VERSION}-win32-setup.exe
+InstallDir $PROGRAMFILES\iEuro
 CRCCheck on
 XPStyle on
 BrandingText " "
@@ -66,16 +66,16 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ../release/vertcoin-qt.exe
+    File ../release/ieuro-qt.exe
     File /oname=COPYING.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/vertcoind.exe
+    File ../src/ieurod.exe
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\vertcoin.exe
+    Delete /REBOOTOK $INSTDIR\ieuro.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -85,8 +85,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Vertcoin.lnk" $INSTDIR\vertcoin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Vertcoin.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\iEuro.lnk" $INSTDIR\ieuro-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall iEuro.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -96,10 +96,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "vertcoin" "URL Protocol" ""
-    WriteRegStr HKCR "vertcoin" "" "URL:Vertcoin"
-    WriteRegStr HKCR "vertcoin\DefaultIcon" "" $INSTDIR\vertcoin-qt.exe
-    WriteRegStr HKCR "vertcoin\shell\open\command" "" '"$INSTDIR\vertcoin-qt.exe" "%1"'
+    WriteRegStr HKCR "ieuro" "URL Protocol" ""
+    WriteRegStr HKCR "ieuro" "" "URL:iEuro"
+    WriteRegStr HKCR "ieuro\DefaultIcon" "" $INSTDIR\ieuro-qt.exe
+    WriteRegStr HKCR "ieuro\shell\open\command" "" '"$INSTDIR\ieuro-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -117,7 +117,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\vertcoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\ieuro-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -126,9 +126,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Vertcoin.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Vertcoin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Vertcoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall iEuro.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\iEuro.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\iEuro.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "vertcoin"
+    DeleteRegKey HKCR "ieuro"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

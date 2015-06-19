@@ -41,7 +41,7 @@ License: LGPL
 Icon:  scripts/img/reload.xcf (modified), src/qt/res/movies/update_spinner.mng
 Icon Pack: Kids
 Designer: Everaldo (Everaldo Coelho)
-License: GNU/GPL 
+License: GNU/GPL
 Site: http://findicons.com/icon/17102/reload?id=17102
 
 Icon: src/qt/res/icons/debugwindow.png
@@ -49,16 +49,15 @@ Designer: Vignoni David
 Site: http://www.oxygen-icons.org/
 License: Oxygen icon theme is dual licensed. You may copy it under the Creative Common Attribution-ShareAlike 3.0 License or the GNU Library General Public License.
 
-Icon: src/qt/res/src/bitcoin.svg, docs/bitcoin_logo_doxygen.png, 
+Icon: src/qt/res/src/bitcoin.svg, docs/bitcoin_logo_doxygen.png,
 	src/qt/res/icons/toolbar.png, src/qt/res/icons/toolbar_testnet.png,
-      
+
 Designer: Jonas Schnelli (based on the original bitcoin logo from Bitboy)
 License: MIT
 
 Icon: src/qt/res/images/splash.png, src/qt/res/images/splash_testnet.png
-      src/qt/res/src/vertcoin_testnet.png, src/qt/res/icons/vertcoin.icns
-      src/qt/res/icons/vertcoin.icns
-      
-Designer: Chris Webbs
-License: Creative Commons
+      src/qt/res/src/ieuro_testnet.png, src/qt/res/icons/ieuro.icns
+      src/qt/res/icons/ieuro.icns
 
+Designer: upgradeadvice
+License: MIT

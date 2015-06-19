@@ -328,6 +328,3 @@ data_chunk decode_hex(std::string hex)
     }
     return result;
 }
-
-
-

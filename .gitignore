@@ -1,7 +1,7 @@
 src/*.exe
-src/vertcoin
-src/vertcoind
-src/test_vertcoin
+src/ieuro
+src/ieurod
+src/test_ieuro
 .*.swp
 *.*~*
 *.bak
@@ -14,12 +14,12 @@ src/test_vertcoin
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-vertcoin-qt
-Vertcoin-Qt.app
+ieuro-qt
+iEuro-Qt.app
 
 # Unit-tests
 Makefile.test
-vertcoin-qt_test
+ieuro-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -31,7 +31,7 @@ qrc_*.cpp
 .DS_Store
 build
 Info
-Vertcoin-Qt.xcodeproj
-Vertcoin-Qt.dmg
+iEuro-Qt.xcodeproj
+iEuro-Qt.dmg
 
 !src/leveldb*/Makefile

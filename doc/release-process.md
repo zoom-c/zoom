@@ -6,7 +6,7 @@ Release Process
 ###update (commit) version in sources
 
 
-	vertcoin-qt.pro
+	ieuro-qt.pro
 	contrib/verifysfbinaries/verify.sh
 	doc/README*
 	share/setup.nsi
@@ -24,8 +24,8 @@ Release Process
 
 ##perform gitian builds
 
- From a directory containing the vertcoin source, gitian-builder and gitian.sigs
-  
+ From a directory containing the ieuro source, gitian-builder and gitian.sigs
+
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=0.8.7
 	cd ./gitian-builder
@@ -42,62 +42,62 @@ Release Process
 	wget 'http://downloads.sourceforge.net/project/boost/boost/1.55.0/boost_1_55_0.tar.bz2'
 	wget 'http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz'
 	cd ..
-	./bin/gbuild ../vertcoin/contrib/gitian-descriptors/boost-win32.yml
+	./bin/gbuild ../ieuro/contrib/gitian-descriptors/boost-win32.yml
 	mv build/out/boost-win32-1.50.0-gitian2.zip inputs/
-	./bin/gbuild ../vertcoin/contrib/gitian-descriptors/qt-win32.yml
+	./bin/gbuild ../ieuro/contrib/gitian-descriptors/qt-win32.yml
 	mv build/out/qt-win32-4.8.3-gitian-r1.zip inputs/
-	./bin/gbuild ../vertcoin/contrib/gitian-descriptors/deps-win32.yml
-	mv build/out/vertcoin-deps-0.0.5.zip inputs/
+	./bin/gbuild ../ieuro/contrib/gitian-descriptors/deps-win32.yml
+	mv build/out/ieuro-deps-0.0.5.zip inputs/
 
- Build vertcoind and vertcoin-qt on Linux32, Linux64, and Win32:
-  
-	./bin/gbuild --commit vertcoin=v${VERSION} ../vertcoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../vertcoin/contrib/gitian-descriptors/gitian.yml
+ Build ieurod and ieuro-qt on Linux32, Linux64, and Win32:
+
+	./bin/gbuild --commit ieuro=v${VERSION} ../ieuro/contrib/gitian-descriptors/gitian.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../ieuro/contrib/gitian-descriptors/gitian.yml
 	pushd build/out
-	zip -r vertcoin-${VERSION}-linux-gitian.zip *
-	mv vertcoin-${VERSION}-linux-gitian.zip ../../
+	zip -r ieuro-${VERSION}-linux-gitian.zip *
+	mv ieuro-${VERSION}-linux-gitian.zip ../../
 	popd
-	./bin/gbuild --commit vertcoin=v${VERSION} ../vertcoin/contrib/gitian-descriptors/gitian-win32.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs/ ../vertcoin/contrib/gitian-descriptors/gitian-win32.yml
+	./bin/gbuild --commit ieuro=v${VERSION} ../ieuro/contrib/gitian-descriptors/gitian-win32.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs/ ../ieuro/contrib/gitian-descriptors/gitian-win32.yml
 	pushd build/out
-	zip -r vertcoin-${VERSION}-win32-gitian.zip *
-	mv vertcoin-${VERSION}-win32-gitian.zip ../../
+	zip -r ieuro-${VERSION}-win32-gitian.zip *
+	mv ieuro-${VERSION}-win32-gitian.zip ../../
 	popd
 
   Build output expected:
 
-  1. linux 32-bit and 64-bit binaries + source (vertcoin-${VERSION}-linux-gitian.zip)
-  2. windows 32-bit binary, installer + source (vertcoin-${VERSION}-win32-gitian.zip)
+  1. linux 32-bit and 64-bit binaries + source (ieuro-${VERSION}-linux-gitian.zip)
+  2. windows 32-bit binary, installer + source (ieuro-${VERSION}-win32-gitian.zip)
   3. Gitian signatures (in gitian.sigs/${VERSION}[-win32]/(your gitian key)/
 
 repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 **Linux .tar.gz:**
 
-	unzip vertcoin-${VERSION}-linux-gitian.zip -d vertcoin-${VERSION}-linux
-	tar czvf vertcoin-${VERSION}-linux.tar.gz vertcoin-${VERSION}-linux
-	rm -rf vertcoin-${VERSION}-linux
+	unzip ieuro-${VERSION}-linux-gitian.zip -d ieuro-${VERSION}-linux
+	tar czvf ieuro-${VERSION}-linux.tar.gz ieuro-${VERSION}-linux
+	rm -rf ieuro-${VERSION}-linux
 
 **Windows .zip and setup.exe:**
 
-	unzip vertcoin-${VERSION}-win32-gitian.zip -d vertcoin-${VERSION}-win32
-	mv vertcoin-${VERSION}-win32/vertcoin-*-setup.exe .
-	zip -r vertcoin-${VERSION}-win32.zip bitcoin-${VERSION}-win32
-	rm -rf vertcoin-${VERSION}-win32
+	unzip ieuro-${VERSION}-win32-gitian.zip -d ieuro-${VERSION}-win32
+	mv ieuro-${VERSION}-win32/ieuro-*-setup.exe .
+	zip -r ieuro-${VERSION}-win32.zip bitcoin-${VERSION}-win32
+	rm -rf ieuro-${VERSION}-win32
 
 **Perform Mac build:**
 
   OSX binaries are created on a dedicated 32-bit, OSX 10.6.8 machine.
-  Vertcoin 0.8.x is built with MacPorts.  0.9.x will be Homebrew only.
+  iEuro 0.8.x is built with MacPorts.  0.9.x will be Homebrew only.
 
-	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 vertcoin-qt.pro
+	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 ieuro-qt.pro
 	make
 	export QTDIR=/opt/local/share/qt4  # needed to find translations/qt_*.qm files
 	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
 	python2.7 share/qt/clean_mac_info_plist.py
-	python2.7 contrib/macdeploy/macdeployqtplus Vertcoin-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
+	python2.7 contrib/macdeploy/macdeployqtplus iEuro-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
 
- Build output expected: Vertcoin-Qt.dmg
+ Build output expected: iEuro-Qt.dmg
 
 ###Next steps:
 
@@ -108,7 +108,7 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 * create SHA256SUMS for builds, and PGP-sign it
 
-* update vertcoin.org version
+* update ieuro version
   make sure all OS download links go to the right versions
 
 * update forum version
@@ -123,4 +123,3 @@ Commit your signature to gitian.sigs:
 	git commit -a
 	git push  # Assuming you can push to the gitian.sigs tree
 	popd
-

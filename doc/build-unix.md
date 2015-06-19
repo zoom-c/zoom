@@ -12,9 +12,9 @@ To Build
 ---------------------
 
     cd src/
-    make -f makefile.unix		# Headless vertcoin
+    make -f makefile.unix		# Headless ieuro
 
-See readme-qt.rst for instructions on building Vertcoin-Qt, the graphical user interface.
+See readme-qt.rst for instructions on building iEuro-Qt, the graphical user interface.
 
 Dependencies
 ---------------------
@@ -112,7 +112,7 @@ Enable miniupnpc system startup by modifying /etc/rc.conf and adding the followi
     miniupnpc_enable="YES"
 
 
-To compile Vertcoin with GNU make:
+To compile iEuro with GNU make:
 
     cd src/
     gmake -f makefile.fbsd
@@ -152,7 +152,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your vertcoin installation more secure by making certain attacks impossible to
+To help make your ieuro installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -170,7 +170,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-        scanelf -e ./vertcoin
+        scanelf -e ./ieuro
 
     The output should contain:
      TYPE
@@ -184,7 +184,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./vertcoin`
+    `scanelf -e ./ieuro`
 
     the output should contain:
     STK/REL/PTL

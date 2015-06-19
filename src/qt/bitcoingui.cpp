@@ -49,6 +49,9 @@
 #include <QSettings>
 #include <QDesktopWidget>
 #include <QListWidget>
+#include <QFile>
+#include <QString>
+#include <QTextStream>
 
 #include <iostream>
 
@@ -66,7 +69,20 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("Vertcoin") + " - " + tr("Wallet"));
+    QFile data(":/qss/qss");
+    QString style;
+    if(data.open(QFile::ReadOnly)) {
+      QTextStream styleIn(&data);
+      style = styleIn.readAll();
+      data.close();
+      qApp->setStyleSheet(style);
+    }
+    //setWindowFlags(Qt::Widget | Qt::FramelessWindowHint);
+    //setParent(0); // Create TopLevel-Widget
+    //setAttribute(Qt::WA_NoSystemBackground, true);
+    // setAttribute(Qt::WA_TranslucentBackground, true);
+    // setAttribute(Qt::WA_PaintOnScreen);
+    setWindowTitle(tr("iEuro") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -173,7 +189,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Vertcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a iEuro address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -224,14 +240,14 @@ void BitcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Vertcoin"), this);
-    aboutAction->setStatusTip(tr("Show information about Vertcoin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About iEuro"), this);
+    aboutAction->setStatusTip(tr("Show information about iEuro"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Vertcoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for iEuro"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -244,9 +260,9 @@ void BitcoinGUI::createActions()
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Vertcoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your iEuro addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Vertcoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified iEuro addresses"));
 
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -294,16 +310,37 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
+static QWidget* makeToolBarSpacer()
+{
+    QWidget* spacer = new QWidget();
+    spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    spacer->setStyleSheet("QWidget{ { background-color: rgba(255, 255, 255, 50%) } }");
+
+    return spacer;
+}
+
 void BitcoinGUI::createToolBars()
 {
-    QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
+    QToolBar *toolbar = new QToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->addAction(overviewAction);
     toolbar->addAction(sendCoinsAction);
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(stealthAddressAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
+    toolbar->addWidget(makeToolBarSpacer());
+    overviewAction->setChecked(true);
+    toolbar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable(false);
+    toolbar->setStyleSheet("QToolBar{ { background-color: rgba(255, 255, 255, 50%) } }");
+    addToolBar(Qt::LeftToolBarArea, toolbar);
+    int w = 160;
+    foreach(QAction *action, toolbar->actions()) {
+        toolbar->widgetForAction(action)->setFixedWidth(w);
+    }
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
@@ -389,7 +426,7 @@ void BitcoinGUI::createTrayIcon()
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
 
-    trayIcon->setToolTip(tr("Vertcoin client"));
+    trayIcon->setToolTip(tr("iEuro client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     trayIcon->show();
 #endif
@@ -535,7 +572,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Vertcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to iEuro network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -634,7 +671,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Vertcoin"); // default title
+    QString strTitle = tr("iEuro"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -773,7 +810,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             walletFrame->gotoSendCoinsPage();
         else
-            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Vertcoin address or malformed URI parameters."),
+            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid iEuro address or malformed URI parameters."),
                       CClientUIInterface::ICON_WARNING);
     }
 
@@ -796,7 +833,7 @@ void BitcoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (!walletFrame->handleURI(strURI))
-        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Vertcoin address or malformed URI parameters."),
+        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid iEuro address or malformed URI parameters."),
                   CClientUIInterface::ICON_WARNING);
 }
 

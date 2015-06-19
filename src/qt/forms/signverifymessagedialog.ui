@@ -155,7 +155,7 @@
          <item>
           <widget class="QPushButton" name="signMessageButton_SM">
            <property name="toolTip">
-            <string>Sign the message to prove you own this Vertcoin address</string>
+            <string>Sign the message to prove you own this iEuro address</string>
            </property>
            <property name="text">
             <string>Sign &amp;Message</string>
@@ -163,6 +163,12 @@
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
              <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -180,6 +186,12 @@
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -301,7 +313,7 @@
          <item>
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="toolTip">
-            <string>Verify the message to ensure it was signed with the specified Vertcoin address</string>
+            <string>Verify the message to ensure it was signed with the specified iEuro address</string>
            </property>
            <property name="text">
             <string>Verify &amp;Message</string>

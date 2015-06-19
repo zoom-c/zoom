@@ -1,12 +1,12 @@
-Building Vertcoin
+Building iEuro
 
-See doc/readme-qt.rst for instructions on building Vertcoin-Qt,
+See doc/readme-qt.rst for instructions on building iEuro-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Vertcoin.
+implementation of iEuro.
 
-See doc/build-*.txt for instructions on building vertcoind,
+See doc/build-*.txt for instructions on building ieurod,
 the intended-for-services, no-graphical-interface, reference
-implementation of Vertcoin.
+implementation of iEuro.
 
 Further build information and documentation is available at
-the official Vertcoin website, http://www.vertcoin.org
+the official iEuro website, http://www.ieuro.org

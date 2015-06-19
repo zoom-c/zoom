@@ -33,8 +33,8 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x4d96a915f49d40b1e5c2844d1ee2dccb90013a990ccea12c492d22110489f0c4");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Vertcoin: starting difficulty is 1 / 2^12
+uint256 hashGenesisBlock("0x5572f72208ed0a9682a3d54e59b98c65e9367d64591d5828b7521fde8bfd195b");
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // iEuro: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
@@ -50,7 +50,7 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 bool fDisableWallet = false;
 unsigned int nCoinCacheSize = 5000;
-int64 nChainStartTime = 1389306217; // Line: 2815
+int64 nChainStartTime = 1433780305; // Line: 2815
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 100000;
@@ -68,7 +68,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Vertcoin Signed Message:\n";
+const string strMessageMagic = "iEuro Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -359,7 +359,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // Vertcoin: IsDust() detection disabled, allows any valid dust to be relayed.
+    // iEuro: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant.
     return false;
 }
@@ -632,7 +632,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
             nMinFee = 0;
     }
 
-    // Vertcoin
+    // iEuro
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -1126,23 +1126,25 @@ unsigned char GetNfactor(int64 nTimestamp) {
     return min(max(N, minNfactor), maxNfactor);
 }
 
-
-int64 static GetBlockValue(int nHeight, int64 nFees)
+int64 GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 50 * COIN;
-
-    // Subsidy is cut in half every 840000 blocks, which will occur approximately every 4 years
-    nSubsidy >>= (nHeight / 840000); // Vertcoin: 840k blocks in ~4 years
+    int64 nSubsidy = 0 * COIN;
+    if (nHeight == 0) {nSubsidy = 0 * COIN;}
+    else if(nHeight == 1 ) {nSubsidy = 10000 * COIN;}     // 10000
+    else if(nHeight <= 22501 ) {nSubsidy = 0 * COIN;}     // 0
+    else if(nHeight <= 50001 ) {nSubsidy = 1 * COIN;}     // 27500
+    else if(nHeight <= 250001 ) {nSubsidy = 0.5 * COIN;}  // 100000
+    else if(nHeight <= 500001 ) {nSubsidy = 0.25 * COIN;} // 62500
+    else if(nHeight <= 1000001 ) {nSubsidy = 0.1 * COIN;} // 50000
+    else if(nHeight >= 1000002 ) {nSubsidy = 0 * COIN;}    // 0
 
     return nSubsidy + nFees;
 }
 
-
-
-static const int64 nTargetTimespan = 3.5 * 24 * 60 * 60; // Vertcoin: 3.5 days
-static const int64 nTargetSpacing = 2.5 * 60; // Vertcoin: 2.5 minutes
+static const int64 nTargetTimespan = 3.5 * 24 * 60 * 60; // iEuro: 3.5 days
+static const int64 nTargetSpacing =  2.5 * 60; // iEuro: 2.5 minutes - 576/day
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
-static const int nKGWInterval = 12; // Timewarp fix - retargets every 12 blocks
+//static const int nKGWInterval = 12; // Timewarp fix - retargets every 12 blocks
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1203,7 +1205,7 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
         return pindexLast->nBits;
     }
 
-    // Vertcoin: This fixes an issue where a 51% attack can change difficulty at will.
+    // iEuro: This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
     int blockstogoback = nInterval-1;
     if ((pindexLast->nHeight+1) != nInterval)
@@ -1305,43 +1307,37 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 
 
 // Using KGW
-unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
-{
-        static const int64        BlocksTargetSpacing                        = 2.5 * 60; // 2.5 minutes
-        unsigned int                TimeDaySeconds                                = 60 * 60 * 24;
-        int64                                PastSecondsMin                                = TimeDaySeconds * 0.25;
-        int64                                PastSecondsMax                                = TimeDaySeconds * 7;
-        uint64                                PastBlocksMin                                = PastSecondsMin / BlocksTargetSpacing;
-        uint64                                PastBlocksMax                                = PastSecondsMax / BlocksTargetSpacing;
+unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast,
+		const CBlockHeader *pblock) {
 
+	int64 BlocksTargetSpacing = 2.5 * 60; // 2.5 minutes
+	if (pindexLast->nHeight + 1 <= 22501) {
+		BlocksTargetSpacing = 0.74375 * 60;
+	}
+	unsigned int TimeDaySeconds = 60 * 60 * 24;
+	int64 PastSecondsMin = TimeDaySeconds * 0.25;
+	int64 PastSecondsMax = TimeDaySeconds * 7;
+	uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
+	uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
 
-        if (fTestNet)
-        {
-            // Set this to the testnet fork block
-	    // Testnet set to fork at 100
-            if(pindexLast->nHeight+1 == 100)
-            {
-                printf("Getting diff at %i. Diff = 0\n", pindexLast->nHeight+1);
-                return 0x1e0ffff0;
-            }
-      	    // testnet to 12 block difficulty adjustment interval
-	    if ((pindexLast->nHeight+1) % nKGWInterval != 0)
-	    {
-		CBigNum bnNew;
-		bnNew.SetCompact(pindexLast->nBits);
-		if (bnNew > bnProofOfWorkLimit) { bnNew = bnProofOfWorkLimit; }
-		return bnNew.GetCompact();
-	    }
-        }
-
-        if(pindexLast->nHeight+1 == 208301)
-        {
-            return 0x1e0ffff0;
-        }
-        else
-        {
-            return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
-        }
+	//	if (fTestNet) {
+	//		// testnet to 12 block difficulty adjustment interval
+	//		if ((pindexLast->nHeight + 1) % nKGWInterval != 0) {
+	//			CBigNum bnNew;
+	//			bnNew.SetCompact(pindexLast->nBits);
+	//			if (bnNew > bnProofOfWorkLimit) {
+	//				bnNew = bnProofOfWorkLimit;
+	//			}
+	//			return bnNew.GetCompact();
+	//		}
+	//	}
+    //lowest diff for non reward blocks
+	if (pindexLast->nHeight + 1 <= 22501) {
+		return 0x1e0ffff0;
+	} else {
+		return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing,
+				PastBlocksMin, PastBlocksMax);
+	}
 }
 
 
@@ -1350,10 +1346,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
 {
         int DiffMode = 1; // legacy diff-mode
         if (fTestNet) {
-                if (pindexLast->nHeight+1 >= 2116) { DiffMode = 2; } // vertcoin, 100 blocks after first legacy diff adjustment
+                if (pindexLast->nHeight+1 >= 2116) { DiffMode = 2; } // ieuro, 100 blocks after first legacy diff adjustment
         }
         else {
-        	if (pindexLast->nHeight+1 >= 26754) { DiffMode = 2; }  //vertcoin, 5 days after 27/01/2014 12:00 UTC
+        	if (pindexLast->nHeight+1 >= 26754) { DiffMode = 2; }  //ieuro, 5 days after 27/01/2014 12:00 UTC
         }
 
         if                (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); } //legacy diff mode
@@ -2272,7 +2268,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // Vertcoin: Special short-term limits to avoid 10,000 BDB lock limit:
+    // iEuro: Special short-term limits to avoid 10,000 BDB lock limit:
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -2289,7 +2285,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
         if (nTxids > 4500)
             return error("CheckBlock() : 15 August maxlocks violation");
     }
-	
+
 	CBlockIndex* pindexPrev = NULL;
     int nHeight = 0;
     if (GetHash() != hashGenesisBlock)
@@ -2449,7 +2445,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired, unsigned int nToCheck)
 {
-    // Vertcoin: temporarily disable v2 block lockin until we are ready for v2 transition
+    // iEuro: temporarily disable v2 block lockin until we are ready for v2 transition
     return false;
     unsigned int nFound = 0;
     for (unsigned int i = 0; i < nToCheck && nFound < nRequired && pstart != NULL; i++)
@@ -2535,7 +2531,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         }
         mapOrphanBlocksByPrev.erase(hashPrev);
     }
-	
+
 	if(!fReindex && !fDisableWallet)
 	{
 		// Check that all transactions are have OP_RETURN
@@ -2552,13 +2548,13 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
 			ec_secret spend_secret;
 			ec_point spend_pubkey;
 			ec_point ephem_pubkey;
-			   
-			   
+
+
 			// check sx transaction
 			for(unsigned int i = 0; i < vtxOut.size(); i++){
 				CTxOut txOut;
 				txOut = vtxOut[i];
-					
+
 				if(txOut.scriptPubKey[0] == OP_RETURN && txOut.scriptPubKey[1] == 0x21){
 
 					// set flag
@@ -2570,7 +2566,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
 					// extract ephem_pubkey
 					ephem_pubkey.insert(ephem_pubkey.end(), txOut.scriptPubKey.begin() + 2, txOut.scriptPubKey.begin() + 35);
 
-					// generate Vertcoin address from ephem_pubkey, scan_secret and spend_secret
+					// generate iEuro address from ephem_pubkey, scan_secret and spend_secret
 					BOOST_FOREACH(const CStealthAddressEntry& stealthAddress, listStealthAddress)
 					{
 						for(unsigned int i = 0; i < 32; i++)
@@ -3019,25 +3015,11 @@ bool LoadBlockIndex()
 {
     if (fTestNet)
     {
-        /*2014-01-08 17:06:16 block.nTime = 1389171600
-        2014-01-08 17:06:16 block.nNonce = 5706611
-        2014-01-08 17:06:16 block.GetHash = 03d493b7a75087b9d06a65ce0c0d8b24ca87333e0360a728d023eb0c8cf48e36
-        2014-01-08 17:06:16 CBlock(hash=03d493b7a75087b9d06a65ce0c0d8b24ca87333e0360a728d023eb0c8cf48e36, input=010000000000000000000000000000000000000000000000000000000000000000000000a25975432fe0326f68d92f3f576e016871195ef828f3b23e5a7faeb672fc73b29013cd52f0ff0f1e73135700, PoW=0000062027f1f5725d81942ddbd14e5664422eb2be006410aee59cfc0efa55d2, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=b273fc72b6ae7f5a3eb2f328f85e197168016e573f2fd9686f32e02f437559a2, nTime=1389171600, nBits=1e0ffff0, nNonce=5706611, vtx=1)
-        2014-01-08 17:06:16   CTransaction(hash=b273fc72b6ae7f5a3eb2f328f85e197168016e573f2fd9686f32e02f437559a2, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-            CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 0002e7034830312f30382f3138333520e280932054484520554e4954454420535441544553204e4154494f4e414c2044454254204953205a45524f20464f5220544845204f4e4c592054494d45)
-            CTxOut(error)
-        vMerkleTree: b273fc72b6ae7f5a3eb2f328f85e197168016e573f2fd9686f32e02f437559a2*/
-
-        /*pchMessageStart[0] = 0xfc;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;*/
-        pchMessageStart[0] = 'v';
+        pchMessageStart[0] = 'i';
         pchMessageStart[1] = 'e';
-        pchMessageStart[2] = 'r';
-        pchMessageStart[3] = 't';
-        hashGenesisBlock = uint256("0xbd270cb82121e85f4eba6d0c2ffdc9eb74674eb9bafed9bbaa0fe8f47d971aae");
-        //hashGenesisBlock = uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f");
+        pchMessageStart[2] = 'u';
+        pchMessageStart[3] = 'r';
+        hashGenesisBlock = uint256("0x1afe77fd55ca5944c2dae27fe4fd4665d0a2307640e1767d374884e01f921775");
     }
 
     //
@@ -3064,7 +3046,7 @@ bool InitBlockIndex() {
     if (!fReindex) {
 
         // Genesis block
-        const char* pszTimestamp = "01/09/2014 Germany to Help in Disposal of Syrian Chemical Weapons";
+        const char* pszTimestamp = "Mon Jun 8 2015 - iEuro";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3078,25 +3060,20 @@ bool InitBlockIndex() {
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce = 5749262;
-        block.nTime = 1389311371;
+        block.nNonce = 1273766;
+        block.nTime = 1433780305;
 
         if (fTestNet)
         {
 
-            block.nNonce = 11521194;
-            block.nTime = 1389306217;
+            block.nNonce = 77203;
+            block.nTime = 1433780343;
         }
 
         //// debug print
         uint256 hash = block.GetHash();
-        printf("%s\n", hash.ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x4af38ca0e323c0a5226208a73b7589a52c030f234810cf51e13e3249fc0123e7"));
-
-
         block.print();
+        assert(block.hashMerkleRoot == uint256("0x3f7f8253aa79eccbd4df672e59b6b9e5bd1a89ee4a6e5a87a66ef9adc3c9ff4f"));
         assert(hash == hashGenesisBlock);
 
         // Start new block file
@@ -3368,7 +3345,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xfa, 0xbf, 0xb5, 0xda }; // Vertcoin: increase each by adding 1 to bitcoin's value.
+unsigned char pchMessageStart[4] = { 0xfb, 0xbf, 0xa5, 0x4a }; // iEuro: increase each by adding 1 to bitcoin's value.
 
 
 void static ProcessGetData(CNode* pfrom)
@@ -4410,7 +4387,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// VertcoinMiner
+// iEuroMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4825,7 +4802,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         pindexPrev = (*mi).second;
         nHeight = pindexPrev->nHeight+1;
     }
-    
+
 	uint256 hash = pblock->GetPoWHash(nHeight);
     uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
     printf("Hash found: %s", hash.GetHex().c_str());
@@ -4834,7 +4811,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("VertcoinMiner:\n");
+    printf("iEuroMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4843,7 +4820,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("VertcoinMiner : generated block is stale");
+            return error("iEuroMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4857,18 +4834,18 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("VertcoinMiner : ProcessBlock, block not accepted");
+            return error("iEuroMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static VertcoinMiner(CWallet *pwallet)
+void static iEuroMiner(CWallet *pwallet)
 {
-    printf("VertcoinMiner started\n");
+    printf("iEuroMiner started\n");
 
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("vertcoin-miner");
+    RenameThread("ieuro-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -4890,7 +4867,7 @@ void static VertcoinMiner(CWallet *pwallet)
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running VertcoinMiner with %" PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running iEuroMiner with %" PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4994,7 +4971,7 @@ void static VertcoinMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        printf("VertcoinMiner terminated\n");
+        printf("iEuroMiner terminated\n");
         throw;
     }
 }
@@ -5019,7 +4996,7 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&VertcoinMiner, pwallet));
+        minerThreads->create_thread(boost::bind(&iEuroMiner, pwallet));
 }
 
 // Amount compression:

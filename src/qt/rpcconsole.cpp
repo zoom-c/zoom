@@ -6,7 +6,9 @@
 #include "ui_rpcconsole.h"
 
 #include "clientmodel.h"
+#ifndef Q_MOC_RUN
 #include "bitcoinrpc.h"
+#endif
 #include "guiutil.h"
 
 #include <QTime>
@@ -312,7 +314,7 @@ void RPCConsole::clear()
                 "b { color: #006060; } "
                 );
 
-    message(CMD_REPLY, (tr("Welcome to the Vertcoin RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the iEuro RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.")), true);
 }
