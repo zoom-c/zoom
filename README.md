@@ -8,7 +8,7 @@ Copyright (c) 2011-2013 Litecoin Developers
 Copyright (c) 2014 Vertcoin Developers
 Copyright (c) 2015 Zoom Developers
 
-What is Zoom?
+What is Zoom (formerly International Euro)?
 ----------------
 
 Zoom is a Bitcoin fork with many upgrades. It uses Lyra2RE as a proof-of-work algorithm.
