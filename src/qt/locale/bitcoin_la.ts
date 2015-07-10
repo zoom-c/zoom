@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About iEuro</source>
-        <translation>Informatio de iEuro</translation>
+        <source>About Zoom</source>
+        <translation>Informatio de Zoom</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;iEuro&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;iEuro&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;Zoom&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Zoom&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+0"/>
-        <source>The iEuro developers</source>
-        <translation>iEuro curatores</translation>
+        <source>The Zoom developers</source>
+        <translation>Zoom curatores</translation>
     </message>
 </context>
 <context>
@@ -66,8 +66,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your iEuro addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Haec sunt inscriptiones iEuro tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
+        <source>These are your Zoom addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Haec sunt inscriptiones Zoom tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a iEuro address</source>
-        <translation>Signa nuntium ut demonstres inscriptionem iEuro a te possessam esse</translation>
+        <source>Sign a message to prove you own a Zoom address</source>
+        <translation>Signa nuntium ut demonstres inscriptionem Zoom a te possessam esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified iEuro address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione iEuro</translation>
+        <source>Verify a message to ensure it was signed with a specified Zoom address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione Zoom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your iEuro addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Zoom addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -247,7 +247,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR IEUROSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZOOMSS&lt;/b&gt;!</source>
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS BITOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-56"/>
-        <source>iEuro will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ieuros from being stolen by malware infecting your computer.</source>
-        <translation>iEuro iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
+        <source>Zoom will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your zooms from being stolen by malware infecting your computer.</source>
+        <translation>Zoom iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -373,8 +373,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about iEuro</source>
-        <translation>Monstra informationem de iEuro</translation>
+        <source>Show information about Zoom</source>
+        <translation>Monstra informationem de Zoom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a iEuro address</source>
-        <translation>Mitte nummos ad inscriptionem iEuro</translation>
+        <source>Send coins to a Zoom address</source>
+        <translation>Mitte nummos ad inscriptionem Zoom</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for iEuro</source>
-        <translation>Muta configurationis optiones pro iEuro</translation>
+        <source>Modify configuration options for Zoom</source>
+        <translation>Muta configurationis optiones pro Zoom</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>iEuro</source>
-        <translation>iEuro</translation>
+        <source>Zoom</source>
+        <translation>Zoom</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About iEuro</source>
-        <translation>&amp;Informatio de iEuro</translation>
+        <source>&amp;About Zoom</source>
+        <translation>&amp;Informatio de Zoom</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your iEuro addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus iEuro ut demonstres te eas possidere</translation>
+        <source>Sign messages with your Zoom addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus Zoom ut demonstres te eas possidere</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified iEuro addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus iEuro</translation>
+        <source>Verify messages to ensure they were signed with specified Zoom addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Zoom</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+47"/>
-        <source>iEuro client</source>
-        <translation>iEuro cliens</translation>
+        <source>Zoom client</source>
+        <translation>Zoom cliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to iEuro network</source>
-        <translation><numerusform>%n activa conexio ad rete iEuro</numerusform><numerusform>%n activae conexiones ad rete iEuro</numerusform></translation>
+        <source>%n active connection(s) to Zoom network</source>
+        <translation><numerusform>%n activa conexio ad rete Zoom</numerusform><numerusform>%n activae conexiones ad rete Zoom</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Inscriptio: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid iEuro address or malformed URI parameters.</source>
-        <translation>URI intellegi non posse!  Huius causa possit inscriptionem iEuro non validam aut URI parametra maleformata.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Zoom address or malformed URI parameters.</source>
+        <translation>URI intellegi non posse!  Huius causa possit inscriptionem Zoom non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. iEuro can no longer continue safely and will quit.</source>
-        <translation>Error fatalis accidit.  iEuro nondum pergere tute potest, et exibit.</translation>
+        <source>A fatal error occurred. Zoom can no longer continue safely and will quit.</source>
+        <translation>Error fatalis accidit.  Zoom nondum pergere tute potest, et exibit.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid iEuro address.</source>
-        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio iEuro est.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Zoom address.</source>
+        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio Zoom est.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Inscriptio: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>iEuro-Qt</source>
-        <translation>iEuro-Qt</translation>
+        <source>Zoom-Qt</source>
+        <translation>Zoom-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start iEuro after logging in to the system.</source>
-        <translation>Pelle iEuro per se postquam in systema inire.</translation>
+        <source>Automatically start Zoom after logging in to the system.</source>
+        <translation>Pelle Zoom per se postquam in systema inire.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start iEuro on system login</source>
-        <translation>&amp;Pelle iEuro cum inire systema</translation>
+        <source>&amp;Start Zoom on system login</source>
+        <translation>&amp;Pelle Zoom cum inire systema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the iEuro client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis iEuro in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the Zoom client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis Zoom in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the iEuro network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecte ad rete iEuro per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
+        <source>Connect to the Zoom network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecte ad rete Zoom per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting iEuro.</source>
-        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam iEuro iterum initiatum erit.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zoom.</source>
+        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam Zoom iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show iEuro addresses in the transaction list or not.</source>
-        <translation>Num monstrare inscriptiones iEuro in enumeratione transactionum.</translation>
+        <source>Whether to show Zoom addresses in the transaction list or not.</source>
+        <translation>Num monstrare inscriptiones Zoom in enumeratione transactionum.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Inscriptio: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting iEuro.</source>
-        <translation>Haec configuratio effectiva erit postquam iEuro iterum initiatum erit.</translation>
+        <source>This setting will take effect after restarting Zoom.</source>
+        <translation>Haec configuratio effectiva erit postquam Zoom iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Inscriptio: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the iEuro network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete iEuro postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zoom network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Zoom postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start ieuro: click-to-pay handler</source>
-        <translation>iEuro incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start zoom: click-to-pay handler</source>
+        <translation>Zoom incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the iEuro-Qt help message to get a list with possible iEuro command-line options.</source>
-        <translation>Monstra nuntium auxilii iEuro-Qt ut videas enumerationem possibilium optionum iEuro mandati initiantis.</translation>
+        <source>Show the Zoom-Qt help message to get a list with possible Zoom command-line options.</source>
+        <translation>Monstra nuntium auxilii Zoom-Qt ut videas enumerationem possibilium optionum Zoom mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>iEuro - Debug window</source>
-        <translation>iEuro - Fenestra debug</translation>
+        <source>Zoom - Debug window</source>
+        <translation>Zoom - Fenestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>iEuro Core</source>
-        <translation>iEuro Nucleus</translation>
+        <source>Zoom Core</source>
+        <translation>Zoom Nucleus</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the iEuro debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aperi plicam catalogi de iEuro debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
+        <source>Open the Zoom debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aperi plicam catalogi de Zoom debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the iEuro RPC console.</source>
-        <translation>Bene ventio in terminale RPC de iEuro.</translation>
+        <source>Welcome to the Zoom RPC console.</source>
+        <translation>Bene ventio in terminale RPC de Zoom.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Insero inscriptionem iEuro (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Insero inscriptionem Zoom (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this iEuro address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem iEuro a te possessa esse</translation>
+        <source>Sign the message to prove you own this Zoom address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem Zoom a te possessa esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified iEuro address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione iEuro</translation>
+        <source>Verify the message to ensure it was signed with the specified Zoom address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Zoom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Insere inscriptionem iEuro (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Insere inscriptionem Zoom (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter iEuro signature</source>
-        <translation>Insere signationem iEuro</translation>
+        <source>Enter Zoom signature</source>
+        <translation>Insere signationem Zoom</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,8 +1648,8 @@ Inscriptio: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The iEuro developers</source>
-        <translation>iEuro curatores</translation>
+        <source>The Zoom developers</source>
+        <translation>Zoom curatores</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2186,8 +2186,8 @@ Inscriptio: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>iEuro version</source>
-        <translation>Versio de iEuro</translation>
+        <source>Zoom version</source>
+        <translation>Versio de Zoom</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or ieurod</source>
-        <translation>Mitte mandatum ad -server vel ieurod</translation>
+        <source>Send command to -server or zoomd</source>
+        <translation>Mitte mandatum ad -server vel zoomd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: ieuro.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: ieuro.conf)</translation>
+        <source>Specify configuration file (default: zoom.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: zoom.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: ieurod.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: ieuro.pid)</translation>
+        <source>Specify pid file (default: zoomd.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: zoom.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ieurorpc
+rpcuser=zoomrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Zoom Alert&quot; admin@foo.com
 </source>
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=ieurorpc
+rpcuser=zoomrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.
 Si plica non existit, eam crea cum permissionibus ut eius dominus tantum sinitur id legere.
 Quoque hortatur alertnotify constituere ut tu notificetur de problematibus;
-exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; admin@foo.com
+exempli gratia: alertnotify=echo %%s | mail -s &quot;Zoom Notificatio&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; adm
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. iEuro is probably already running.</source>
-        <translation>Non posse serare datorum indicem %s.  iEuro probabiliter iam operatur.</translation>
+        <source>Cannot obtain a lock on data directory %s. Zoom is probably already running.</source>
+        <translation>Non posse serare datorum indicem %s.  Zoom probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; adm
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong iEuro will not work properly.</source>
-        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, iEuro non proprie fungetur.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Zoom will not work properly.</source>
+        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, Zoom non proprie fungetur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; adm
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the iEuro Wiki for SSL setup instructions)</source>
-        <translation>Optiones SSL: (vide vici de iEuro pro instructionibus SSL configurationis)</translation>
+        <source>SSL options: (see the Zoom Wiki for SSL setup instructions)</source>
+        <translation>Optiones SSL: (vide vici de Zoom pro instructionibus SSL configurationis)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; adm
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of iEuro</source>
-        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio iEuro</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Zoom</source>
+        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio Zoom</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart iEuro to complete</source>
-        <translation>Cassidili necesse erat rescribi: Repelle iEuro ut compleas</translation>
+        <source>Wallet needed to be rewritten: restart Zoom to complete</source>
+        <translation>Cassidili necesse erat rescribi: Repelle Zoom ut compleas</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;iEuro Notificatio&quot; adm
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. iEuro is probably already running.</source>
-        <translation>Non posse conglutinare ad %s in hoc cumputatro.  iEuro probabiliter iam operatur.</translation>
+        <source>Unable to bind to %s on this computer. Zoom is probably already running.</source>
+        <translation>Non posse conglutinare ad %s in hoc cumputatro.  Zoom probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+64"/>

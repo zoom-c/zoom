@@ -1,6 +1,6 @@
-ieuro-qt usr/bin
-share/pixmaps/ieuro32.xpm usr/share/pixmaps
-share/pixmaps/ieuro16.xpm usr/share/pixmaps
-share/pixmaps/ieuro128.png usr/share/pixmaps
-debian/ieuro-qt.desktop usr/share/applications
-debian/ieuro-qt.protocol usr/share/kde4/services/
+zoom-qt usr/bin
+share/pixmaps/zoom32.xpm usr/share/pixmaps
+share/pixmaps/zoom16.xpm usr/share/pixmaps
+share/pixmaps/zoom128.png usr/share/pixmaps
+debian/zoom-qt.desktop usr/share/applications
+debian/zoom-qt.protocol usr/share/kde4/services/

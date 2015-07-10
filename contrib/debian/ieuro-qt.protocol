@@ -1,6 +1,6 @@
 [Protocol]
-exec=ieuro-qt '%u'
-protocol=ieuro
+exec=zoom-qt '%u'
+protocol=zoom
 input=none
 output=none
 helper=true

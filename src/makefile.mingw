@@ -131,10 +131,10 @@ OBJS_SSE2= obj/scrypt-sse2.o
 OBJS += $(OBJS_SSE2)
 endif
 
-all: ieurod.exe
+all: zoomd.exe
 
-test check: test_ieuro.exe FORCE
-	test_ieuro.exe
+test check: test_zoom.exe FORCE
+	test_zoom.exe
 
 #
 # LevelDB support
@@ -154,7 +154,7 @@ obj/%.o: %.cpp $(HEADERS)
 Lyra2RE/%.o: Lyra2RE%.c $(HEADERS)
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
-ieurod.exe: $(OBJS:obj/%=obj/%)
+zoomd.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -162,11 +162,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_ieuro.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_zoom.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework$(BOOST_SUFFIX) $(LIBS)
     
 clean:
-	rm -f ieurod.exe test_ieuro.exe
+	rm -f zoomd.exe test_zoom.exe
 	rm -f obj/*
 	rm -f Lyra2RE/*.o
 	rm -f obj-test/*

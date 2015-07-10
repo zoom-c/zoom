@@ -1,12 +1,12 @@
-Building iEuro
+Building Zoom
 
-See doc/readme-qt.rst for instructions on building iEuro-Qt,
+See doc/readme-qt.rst for instructions on building Zoom-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of iEuro.
+implementation of Zoom.
 
-See doc/build-*.txt for instructions on building ieurod,
+See doc/build-*.txt for instructions on building zoomd,
 the intended-for-services, no-graphical-interface, reference
-implementation of iEuro.
+implementation of Zoom.
 
 Further build information and documentation is available at
-the official iEuro website, http://www.ieuro.org
+the official Zoom website, http://www.ZoomCoin.co

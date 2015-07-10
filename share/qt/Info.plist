@@ -3,11 +3,11 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>ieuro.icns</string>
+	<string>zoom.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>$VERSION, Copyright © $YEAR The iEuro developers</string>
+	<string>$VERSION, Copyright © $YEAR The Zoom developers</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$VERSION</string>
 	<key>CFBundleVersion</key>
@@ -15,19 +15,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>iEuro-Qt</string>
+	<string>Zoom-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.ieuro.iEuro-Qt</string>
+	<string>org.zoom.Zoom-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.ieuro.iEuroPayment</string>
+            <string>org.zoom.ZoomPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>ieuro</string>
+              <string>zoom</string>
             </array>
           </dict>
         </array>

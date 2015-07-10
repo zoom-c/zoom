@@ -1,7 +1,7 @@
 src/*.exe
-src/ieuro
-src/ieurod
-src/test_ieuro
+src/zoom
+src/zoomd
+src/test_zoom
 .*.swp
 *.*~*
 *.bak
@@ -14,12 +14,12 @@ src/test_ieuro
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-ieuro-qt
-iEuro-Qt.app
+zoom-qt
+Zoom-Qt.app
 
 # Unit-tests
 Makefile.test
-ieuro-qt_test
+zoom-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -31,7 +31,7 @@ qrc_*.cpp
 .DS_Store
 build
 Info
-iEuro-Qt.xcodeproj
-iEuro-Qt.dmg
+Zoom-Qt.xcodeproj
+Zoom-Qt.dmg
 
 !src/leveldb*/Makefile

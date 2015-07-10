@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=iEuro
-Comment=iEuro P2P Cryptocurrency
-Exec=/usr/bin/ieuro-qt %u
+Name=Zoom
+Comment=Zoom P2P Cryptocurrency
+Exec=/usr/bin/zoom-qt %u
 Terminal=false
 Type=Application
-Icon=/usr/share/pixmaps/ieuro128.png
+Icon=/usr/share/pixmaps/zoom128.png
 MimeType=x-scheme-handler/bitcoin;
 Categories=Office;
-Name[en_US]=ieuro-qt.desktop
+Name[en_US]=zoom-qt.desktop

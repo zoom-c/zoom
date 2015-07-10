@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About iEuro</source>
-        <translation>Sobre o iEuro</translation>
+        <source>About Zoom</source>
+        <translation>Sobre o Zoom</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;iEuro&lt;/b&gt; version</source>
-        <translation>Versão do &lt;b&gt;iEuro&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Zoom&lt;/b&gt; version</source>
+        <translation>Versão do &lt;b&gt;Zoom&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+0"/>
-        <source>The iEuro developers</source>
-        <translation>Desenvolvedores do iEuro</translation>
+        <source>The Zoom developers</source>
+        <translation>Desenvolvedores do Zoom</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your iEuro addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estes são os seus endereços iEuro para receber pagamentos. Você pode querer enviar um endereço diferente para cada remetente, para acompanhar quem está pagando.</translation>
+        <source>These are your Zoom addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estes são os seus endereços Zoom para receber pagamentos. Você pode querer enviar um endereço diferente para cada remetente, para acompanhar quem está pagando.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a iEuro address</source>
-        <translation>Assine uma mensagem para provar que você é dono de um endereço iEuro</translation>
+        <source>Sign a message to prove you own a Zoom address</source>
+        <translation>Assine uma mensagem para provar que você é dono de um endereço Zoom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified iEuro address</source>
-        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço iEuro específico.</translation>
+        <source>Verify a message to ensure it was signed with a specified Zoom address</source>
+        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço Zoom específico.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your iEuro addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estes são os seus endereços iEuro para receber pagamentos. Você pode querer enviar um endereço diferente para cada remetente, para acompanhar quem está pagando.</translation>
+        <source>These are your Zoom addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estes são os seus endereços Zoom para receber pagamentos. Você pode querer enviar um endereço diferente para cada remetente, para acompanhar quem está pagando.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR IEUROSS&lt;/b&gt;!</source>
-        <translation>Aviso: Se você criptografar sua carteira e perder sua senha, você vai &lt;b&gt;perder todos os seus IEUROSS!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZOOMSS&lt;/b&gt;!</source>
+        <translation>Aviso: Se você criptografar sua carteira e perder sua senha, você vai &lt;b&gt;perder todos os seus ZOOMSS!&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>iEuro will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ieuros from being stolen by malware infecting your computer.</source>
-        <translation>O iEuro irá fechar agora para finalizar o processo de encriptação. Lembre-se de que encriptar sua carteira não protege totalmente suas ieuros de serem roubadas por malwares que tenham infectado o seu computador.</translation>
+        <source>Zoom will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your zooms from being stolen by malware infecting your computer.</source>
+        <translation>O Zoom irá fechar agora para finalizar o processo de encriptação. Lembre-se de que encriptar sua carteira não protege totalmente suas zooms de serem roubadas por malwares que tenham infectado o seu computador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about iEuro</source>
-        <translation>Mostrar informação sobre iEuro</translation>
+        <source>Show information about Zoom</source>
+        <translation>Mostrar informação sobre Zoom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a iEuro address</source>
-        <translation>Enviar moedas para um endereço ieuro</translation>
+        <source>Send coins to a Zoom address</source>
+        <translation>Enviar moedas para um endereço zoom</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for iEuro</source>
-        <translation>Modificar opções de configuração para ieuro</translation>
+        <source>Modify configuration options for Zoom</source>
+        <translation>Modificar opções de configuração para zoom</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>iEuro</source>
-        <translation>iEuro</translation>
+        <source>Zoom</source>
+        <translation>Zoom</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About iEuro</source>
-        <translation>&amp;Sobre o iEuro</translation>
+        <source>&amp;About Zoom</source>
+        <translation>&amp;Sobre o Zoom</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your iEuro addresses to prove you own them</source>
-        <translation>Assine mensagems com seus endereços iEuro para provar que você é dono deles</translation>
+        <source>Sign messages with your Zoom addresses to prove you own them</source>
+        <translation>Assine mensagems com seus endereços Zoom para provar que você é dono deles</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified iEuro addresses</source>
-        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços iEuro específicos</translation>
+        <source>Verify messages to ensure they were signed with specified Zoom addresses</source>
+        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços Zoom específicos</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+47"/>
-        <source>iEuro client</source>
-        <translation>Cliente iEuro</translation>
+        <source>Zoom client</source>
+        <translation>Cliente Zoom</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to iEuro network</source>
-        <translation><numerusform>%n conexão ativa na rede iEuro</numerusform><numerusform>%n conexões ativas na rede iEuro</numerusform></translation>
+        <source>%n active connection(s) to Zoom network</source>
+        <translation><numerusform>%n conexão ativa na rede Zoom</numerusform><numerusform>%n conexões ativas na rede Zoom</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Endereço: %4</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid iEuro address or malformed URI parameters.</source>
-        <translation>URI não pode ser decodificado! Isso pode ter sido causado por um endereço iEuro inválido ou por parâmetros URI malformados.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Zoom address or malformed URI parameters.</source>
+        <translation>URI não pode ser decodificado! Isso pode ter sido causado por um endereço Zoom inválido ou por parâmetros URI malformados.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. iEuro can no longer continue safely and will quit.</source>
-        <translation>Um erro fatal ocorreu. iEuro não pode continuar em segurança e irá fechar.</translation>
+        <source>A fatal error occurred. Zoom can no longer continue safely and will quit.</source>
+        <translation>Um erro fatal ocorreu. Zoom não pode continuar em segurança e irá fechar.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid iEuro address.</source>
-        <translation>O endereço digitado &quot;%1&quot; não é um endereço iEuro válido.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Zoom address.</source>
+        <translation>O endereço digitado &quot;%1&quot; não é um endereço Zoom válido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Endereço: %4</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>iEuro-Qt</source>
-        <translation>iEuro-Qt</translation>
+        <source>Zoom-Qt</source>
+        <translation>Zoom-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start iEuro after logging in to the system.</source>
-        <translation>Iniciar iEuro automaticamente após se logar no sistema.</translation>
+        <source>Automatically start Zoom after logging in to the system.</source>
+        <translation>Iniciar Zoom automaticamente após se logar no sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start iEuro on system login</source>
-        <translation>Iniciar iEuro no login do sistema</translation>
+        <source>&amp;Start Zoom on system login</source>
+        <translation>Iniciar Zoom no login do sistema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the iEuro client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir as portas do cliente iEuro automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
+        <source>Automatically open the Zoom client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir as portas do cliente Zoom automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the iEuro network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conectar à rede iEuro através de um proxy SOCKS (ex. quando estiver usando através do Tor)</translation>
+        <source>Connect to the Zoom network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conectar à rede Zoom através de um proxy SOCKS (ex. quando estiver usando através do Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting iEuro.</source>
-        <translation>A língua da interface com usuário pode ser escolhida aqui. Esta configuração só surtirá efeito após reiniciar o iEuro.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zoom.</source>
+        <translation>A língua da interface com usuário pode ser escolhida aqui. Esta configuração só surtirá efeito após reiniciar o Zoom.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -939,12 +939,12 @@ Endereço: %4</translation>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar ieuros.</translation>
+        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar zooms.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show iEuro addresses in the transaction list or not.</source>
-        <translation>Mostrar ou não endereços iEuro na lista de transações.</translation>
+        <source>Whether to show Zoom addresses in the transaction list or not.</source>
+        <translation>Mostrar ou não endereços Zoom na lista de transações.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Endereço: %4</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting iEuro.</source>
-        <translation>Esta configuração surtirá efeito após reinicializar o aplicativo iEuro</translation>
+        <source>This setting will take effect after restarting Zoom.</source>
+        <translation>Esta configuração surtirá efeito após reinicializar o aplicativo Zoom</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Endereço: %4</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the iEuro network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede iEuro depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zoom network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede Zoom depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Endereço: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start ieuro: click-to-pay handler</source>
-        <translation>Não foi possível iniciar ieuro: manipulador clique-para-pagar</translation>
+        <source>Cannot start zoom: click-to-pay handler</source>
+        <translation>Não foi possível iniciar zoom: manipulador clique-para-pagar</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the iEuro-Qt help message to get a list with possible iEuro command-line options.</source>
-        <translation>Mostrar mensagem de ajuda do iEuro-Qt para obter uma lista com possíveis opções da linha de comando do iEuro.</translation>
+        <source>Show the Zoom-Qt help message to get a list with possible Zoom command-line options.</source>
+        <translation>Mostrar mensagem de ajuda do Zoom-Qt para obter uma lista com possíveis opções da linha de comando do Zoom.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>iEuro - Debug window</source>
-        <translation>iEuro - Janela de Depuração</translation>
+        <source>Zoom - Debug window</source>
+        <translation>Zoom - Janela de Depuração</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>iEuro Core</source>
-        <translation>Núcleo iEuro</translation>
+        <source>Zoom Core</source>
+        <translation>Núcleo Zoom</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the iEuro debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abrir o arquivo de log de depuração do iEuro do diretório atual de dados. Isso pode levar alguns segundos para arquivos de log grandes.</translation>
+        <source>Open the Zoom debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abrir o arquivo de log de depuração do Zoom do diretório atual de dados. Isso pode levar alguns segundos para arquivos de log grandes.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the iEuro RPC console.</source>
-        <translation>Bem-vindo ao console iEuro RPC.</translation>
+        <source>Welcome to the Zoom RPC console.</source>
+        <translation>Bem-vindo ao console Zoom RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1384,7 +1384,7 @@ Endereço: %4</translation>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos ieuros de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns ieuros foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
+        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos zooms de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns zooms foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
     </message>
 </context>
 <context>
@@ -1447,8 +1447,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Digite um endereço iEuro (exemplo: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Digite um endereço Zoom (exemplo: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this iEuro address</source>
-        <translation>Assinar mensagem para provar que você é dono deste endereço iEuro</translation>
+        <source>Sign the message to prove you own this Zoom address</source>
+        <translation>Assinar mensagem para provar que você é dono deste endereço Zoom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified iEuro address</source>
-        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço iEuro específico.</translation>
+        <source>Verify the message to ensure it was signed with the specified Zoom address</source>
+        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço Zoom específico.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Endereço: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Digite um endereço iEuro (exemplo: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Digite um endereço Zoom (exemplo: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter iEuro signature</source>
-        <translation>Entre com a assinatura iEuro</translation>
+        <source>Enter Zoom signature</source>
+        <translation>Entre com a assinatura Zoom</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,8 +1648,8 @@ Endereço: %4</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The iEuro developers</source>
-        <translation>Desenvolvedores do iEuro</translation>
+        <source>The Zoom developers</source>
+        <translation>Desenvolvedores do Zoom</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1783,7 +1783,7 @@ Endereço: %4</translation>
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>iEuros gerados precisam maturar por 120 blocos antes de serem gastos. Quando você gera este bloco, ele é difundido na rede para ser adicionado ao blockchain. Se ele falhar ao ser acrescentado no blockchain, seu estado mudará para &quot;não aceito&quot; e não poderá ser gasto. Isso pode ocasionamente acontecer se outro nó gerou um bloco poucos segundos antes do seu.</translation>
+        <translation>Zooms gerados precisam maturar por 120 blocos antes de serem gastos. Quando você gera este bloco, ele é difundido na rede para ser adicionado ao blockchain. Se ele falhar ao ser acrescentado no blockchain, seu estado mudará para &quot;não aceito&quot; e não poderá ser gasto. Isso pode ocasionamente acontecer se outro nó gerou um bloco poucos segundos antes do seu.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2186,8 +2186,8 @@ Endereço: %4</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>iEuro version</source>
-        <translation>Versão do iEuro</translation>
+        <source>Zoom version</source>
+        <translation>Versão do Zoom</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or ieurod</source>
-        <translation>Enviar comando para -server ou ieurod</translation>
+        <source>Send command to -server or zoomd</source>
+        <translation>Enviar comando para -server ou zoomd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Endereço: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: ieuro.conf)</source>
-        <translation>Especifique um arquivo de configurações (padrão: ieuro.conf)</translation>
+        <source>Specify configuration file (default: zoom.conf)</source>
+        <translation>Especifique um arquivo de configurações (padrão: zoom.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: ieurod.pid)</source>
-        <translation>Especifique um arquivo de pid (padrão: ieurod.pid)</translation>
+        <source>Specify pid file (default: zoomd.pid)</source>
+        <translation>Especifique um arquivo de pid (padrão: zoomd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Endereço: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ieurorpc
+rpcuser=zoomrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Zoom Alert&quot; admin@foo.com
 </source>
         <translation>%s, você deve especificar uma senha rpcpassword no arquivo de configuração:⏎
 %s⏎
 É recomendado que você use a seguinte senha aleatória:⏎
-rpcuser=ieurorpc⏎
+rpcuser=zoomrpc⏎
 rpcpassword=%s⏎
 (você não precisa lembrar esta senha)⏎
 O nome de usuário e a senha NÃO PODEM ser os mesmos.⏎
 Se o arquivo não existir, crie um com permissão de leitura apenas para o dono.⏎
 É recomendado também definir um alertnotify para que você seja notificado de problemas;⏎
-por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.com⏎
+por exemplo: alertnotify=echo %%s | mail -s &quot;Zoom Alert&quot; admin@foo.com⏎
 </translation>
     </message>
     <message>
@@ -2331,13 +2331,13 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. iEuro is probably already running.</source>
-        <translation>Não foi possível obter exclusividade de escrita no endereço %s. O iEuro provavelmente já está rodando.</translation>
+        <source>Cannot obtain a lock on data directory %s. Zoom is probably already running.</source>
+        <translation>Não foi possível obter exclusividade de escrita no endereço %s. O Zoom provavelmente já está rodando.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos ieuros de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns ieuros foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
+        <translation>Erro: A transação foi rejeitada. Isso pode acontecer se alguns dos zooms de sua carteira já haviam sido gastos, por exemplo se você usou uma cópia do arquivo wallet.dat e alguns zooms foram gastos na cópia mas não foram marcados como gastos aqui.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2376,8 +2376,8 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong iEuro will not work properly.</source>
-        <translation>Cuidado: Por favor, verifique que a data e hora do seu computador estão corretas! If o seu relógio estiver errado, o iEuro não irá funcionar corretamente.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Zoom will not work properly.</source>
+        <translation>Cuidado: Por favor, verifique que a data e hora do seu computador estão corretas! If o seu relógio estiver errado, o Zoom não irá funcionar corretamente.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the iEuro Wiki for SSL setup instructions)</source>
-        <translation>Opções SSL: (veja a Wiki do iEuro para instruções de configuração SSL)</translation>
+        <source>SSL options: (see the Zoom Wiki for SSL setup instructions)</source>
+        <translation>Opções SSL: (veja a Wiki do Zoom para instruções de configuração SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of iEuro</source>
-        <translation>Erro ao carregar wallet.dat: Carteira requer uma versão mais nova do iEuro</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Zoom</source>
+        <translation>Erro ao carregar wallet.dat: Carteira requer uma versão mais nova do Zoom</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart iEuro to complete</source>
-        <translation>A Carteira precisou ser reescrita: reinicie o iEuro para completar</translation>
+        <source>Wallet needed to be rewritten: restart Zoom to complete</source>
+        <translation>A Carteira precisou ser reescrita: reinicie o Zoom para completar</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. iEuro is probably already running.</source>
-        <translation>Impossível vincular a %s neste computador. O iEuro provavelmente já está rodando.</translation>
+        <source>Unable to bind to %s on this computer. Zoom is probably already running.</source>
+        <translation>Impossível vincular a %s neste computador. O Zoom provavelmente já está rodando.</translation>
     </message>
     <message>
         <location line="+64"/>

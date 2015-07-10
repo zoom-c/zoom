@@ -1,5 +1,5 @@
 ---
-name: "ieuro-deps"
+name: "zoom-deps"
 suites:
 - "precise"
 architectures:
@@ -98,4 +98,4 @@ script: |
   cd ..
   #
   cd $INSTALLPREFIX
-  zip -r $OUTDIR/ieuro-deps-win32-gitian-r3.zip include lib
+  zip -r $OUTDIR/zoom-deps-win32-gitian-r3.zip include lib

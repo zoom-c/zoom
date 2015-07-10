@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About iEuro</source>
-        <translation>iEuroist</translation>
+        <source>About Zoom</source>
+        <translation>Zoomist</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;iEuro&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;iEuroi&lt;/b&gt; versioon</translation>
+        <source>&lt;b&gt;Zoom&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Zoomi&lt;/b&gt; versioon</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,7 +34,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+0"/>
-        <source>The iEuro developers</source>
+        <source>The Zoom developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -67,8 +67,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your iEuro addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Maksete saamiseks kasutatavad iEuroi aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
+        <source>These are your Zoom addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Maksete saamiseks kasutatavad Zoomi aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,7 +82,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a iEuro address</source>
+        <source>Sign a message to prove you own a Zoom address</source>
         <translation>Allkirjasta sõnum, et tõestada Bitconi aadressi olemasolu.</translation>
     </message>
     <message>
@@ -107,8 +107,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified iEuro address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud iEuroi aadressiga.</translation>
+        <source>Verify a message to ensure it was signed with a specified Zoom address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Zoomi aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your iEuro addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu iEuroi aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
+        <source>These are your Zoom addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Zoomi aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR IEUROSS&lt;/b&gt;!</source>
-        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA IEUROSID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ZOOMSS&lt;/b&gt;!</source>
+        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA ZOOMSID&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>iEuro will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ieuros from being stolen by malware infecting your computer.</source>
-        <translation>iEuro sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista ieuroide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Zoom will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your zooms from being stolen by malware infecting your computer.</source>
+        <translation>Zoom sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista zoomide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about iEuro</source>
-        <translation>Kuva info iEuroi kohta</translation>
+        <source>Show information about Zoom</source>
+        <translation>Kuva info Zoomi kohta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a iEuro address</source>
-        <translation>Saada münte iEuroi aadressile</translation>
+        <source>Send coins to a Zoom address</source>
+        <translation>Saada münte Zoomi aadressile</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for iEuro</source>
-        <translation>Muuda iEuroi seadeid</translation>
+        <source>Modify configuration options for Zoom</source>
+        <translation>Muuda Zoomi seadeid</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>iEuro</source>
-        <translation>iEuro</translation>
+        <source>Zoom</source>
+        <translation>Zoom</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About iEuro</source>
-        <translation>%iEuroist</translation>
+        <source>&amp;About Zoom</source>
+        <translation>%Zoomist</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your iEuro addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma iEuroi aadressiga</translation>
+        <source>Sign messages with your Zoom addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Zoomi aadressiga</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified iEuro addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud iEuroi aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Zoom addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Zoomi aadressiga</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+47"/>
-        <source>iEuro client</source>
-        <translation>iEuroi klient</translation>
+        <source>Zoom client</source>
+        <translation>Zoomi klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to iEuro network</source>
-        <translation><numerusform>%n aktiivne ühendus iEuroi võrku</numerusform><numerusform>%n aktiivset ühendust iEuroi võrku</numerusform></translation>
+        <source>%n active connection(s) to Zoom network</source>
+        <translation><numerusform>%n aktiivne ühendus Zoomi võrku</numerusform><numerusform>%n aktiivset ühendust Zoomi võrku</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid iEuro address or malformed URI parameters.</source>
-        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu iEuroi aadress või vigased URI parameetrid.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Zoom address or malformed URI parameters.</source>
+        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu Zoomi aadress või vigased URI parameetrid.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. iEuro can no longer continue safely and will quit.</source>
-        <translation>Ilmnes kriitiline tõrge. iEuro suletakse turvakaalutluste tõttu.</translation>
+        <source>A fatal error occurred. Zoom can no longer continue safely and will quit.</source>
+        <translation>Ilmnes kriitiline tõrge. Zoom suletakse turvakaalutluste tõttu.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid iEuro address.</source>
-        <translation>Sisestatud aadress &quot;%1&quot; ei ole iEurois kehtiv.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Zoom address.</source>
+        <translation>Sisestatud aadress &quot;%1&quot; ei ole Zoomis kehtiv.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>iEuro-Qt</source>
-        <translation>iEuroi-Qt</translation>
+        <source>Zoom-Qt</source>
+        <translation>Zoomi-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start iEuro after logging in to the system.</source>
-        <translation>Käivita iEuro süsteemi logimisel.</translation>
+        <source>Automatically start Zoom after logging in to the system.</source>
+        <translation>Käivita Zoom süsteemi logimisel.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start iEuro on system login</source>
-        <translation>&amp;Start iEuro sisselogimisel</translation>
+        <source>&amp;Start Zoom on system login</source>
+        <translation>&amp;Start Zoom sisselogimisel</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the iEuro client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>iEuroi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Zoom client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Zoomi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the iEuro network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Kasuta iEuroi võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
+        <source>Connect to the Zoom network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Kasuta Zoomi võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting iEuro.</source>
-        <translation>Kasutajaliidese keele valimise koht. Valik rakendub iEuroi käivitamisel.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Zoom.</source>
+        <translation>Kasutajaliidese keele valimise koht. Valik rakendub Zoomi käivitamisel.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show iEuro addresses in the transaction list or not.</source>
-        <translation>Kuvada iEuroi aadress tehingute loetelus või mitte.</translation>
+        <source>Whether to show Zoom addresses in the transaction list or not.</source>
+        <translation>Kuvada Zoomi aadress tehingute loetelus või mitte.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting iEuro.</source>
-        <translation>Tehtud valik rakendub iEuroi käivitamisel.</translation>
+        <source>This setting will take effect after restarting Zoom.</source>
+        <translation>Tehtud valik rakendub Zoomi käivitamisel.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,7 +1014,7 @@ Aadress: %4⏎</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the iEuro network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zoom network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1068,8 +1068,8 @@ Aadress: %4⏎</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start ieuro: click-to-pay handler</source>
-        <translation>iEuro ei käivitu: vajuta-maksa toiming</translation>
+        <source>Cannot start zoom: click-to-pay handler</source>
+        <translation>Zoom ei käivitu: vajuta-maksa toiming</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the iEuro-Qt help message to get a list with possible iEuro command-line options.</source>
-        <translation>Näita kehtivate käsurea valikute kuvamiseks iEuroi-Qt abiteksti</translation>
+        <source>Show the Zoom-Qt help message to get a list with possible Zoom command-line options.</source>
+        <translation>Näita kehtivate käsurea valikute kuvamiseks Zoomi-Qt abiteksti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>iEuro - Debug window</source>
-        <translation>iEuro - debugimise aken</translation>
+        <source>Zoom - Debug window</source>
+        <translation>Zoom - debugimise aken</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>iEuro Core</source>
-        <translation>iEuroi tuumik</translation>
+        <source>Zoom Core</source>
+        <translation>Zoomi tuumik</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the iEuro debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ava iEuroi logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
+        <source>Open the Zoom debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ava Zoomi logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the iEuro RPC console.</source>
-        <translation>Teretulemast iEuroi RPC konsooli.</translation>
+        <source>Welcome to the Zoom RPC console.</source>
+        <translation>Teretulemast Zoomi RPC konsooli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Sisesta iEuroi aadress (nt: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Sisesta Zoomi aadress (nt: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this iEuro address</source>
-        <translation>Allkirjasta sõnum iEuroi aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Zoom address</source>
+        <translation>Allkirjasta sõnum Zoomi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified iEuro address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud iEuroi aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Zoom address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Zoomi aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a iEuro address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
-        <translation>Sisesta iEuroi aadress (nt: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
+        <source>Enter a Zoom address (e.g. Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</source>
+        <translation>Sisesta Zoomi aadress (nt: Vg6KN8SSPGuwxy3gwDodxghD3YHqqTpzDs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter iEuro signature</source>
-        <translation>Sisesta iEuroi allkiri</translation>
+        <source>Enter Zoom signature</source>
+        <translation>Sisesta Zoomi allkiri</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,7 +1648,7 @@ Aadress: %4⏎</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The iEuro developers</source>
+        <source>The Zoom developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2186,8 +2186,8 @@ Aadress: %4⏎</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>iEuro version</source>
-        <translation>iEuroi versioon</translation>
+        <source>Zoom version</source>
+        <translation>Zoomi versioon</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or ieurod</source>
-        <translation>Saada käsklus -serverile või ieurodile</translation>
+        <source>Send command to -server or zoomd</source>
+        <translation>Saada käsklus -serverile või zoomdile</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: ieuro.conf)</source>
-        <translation>Täpsusta sätete fail (vaikimisi: ieuro.conf)</translation>
+        <source>Specify configuration file (default: zoom.conf)</source>
+        <translation>Täpsusta sätete fail (vaikimisi: zoom.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: ieurod.pid)</source>
-        <translation>Täpsusta PID fail (vaikimisi: ieuro.pid)</translation>
+        <source>Specify pid file (default: zoomd.pid)</source>
+        <translation>Täpsusta PID fail (vaikimisi: zoom.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Aadress: %4⏎</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=ieurorpc
+rpcuser=zoomrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;iEuro Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Zoom Alert&quot; admin@foo.com
 </source>
         <translation>%s, sul tuleb rpcpassword määrata seadete failis:
 %s
 Soovitatav on kasutada järgmist juhuslikku parooli:
-rpcuser=ieurorpc
+rpcuser=zoomrpc
 rpcpassword=%s
 (seda parooli ei pea meeles pidama)
 Kasutajanimi ning parool EI TOHI kattuda.
 Kui faili ei leita, loo see ainult-omaniku-loetavas failiõigustes .
 Soovitatav on seadistada tõrgete puhul teavitus;
-nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
+nt: alertnotify=echo %%s | email -s &quot;Zoom Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. iEuro is probably already running.</source>
-        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on iEuro juba avatud.</translation>
+        <source>Cannot obtain a lock on data directory %s. Zoom is probably already running.</source>
+        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on Zoom juba avatud.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong iEuro will not work properly.</source>
-        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis iEuro ei tööta korralikult</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Zoom will not work properly.</source>
+        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis Zoom ei tööta korralikult</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the iEuro Wiki for SSL setup instructions)</source>
-        <translation>SSL valikud: (vaata iEuroi Wikist või SSL sätete juhendist)</translation>
+        <source>SSL options: (see the Zoom Wiki for SSL setup instructions)</source>
+        <translation>SSL valikud: (vaata Zoomi Wikist või SSL sätete juhendist)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of iEuro</source>
-        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab iEuroi uusimat versiooni</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Zoom</source>
+        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab Zoomi uusimat versiooni</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart iEuro to complete</source>
-        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita iEuro</translation>
+        <source>Wallet needed to be rewritten: restart Zoom to complete</source>
+        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita Zoom</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ nt: alertnotify=echo %%s | email -s &quot;iEuro Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. iEuro is probably already running.</source>
-        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. iEuro juba töötab.</translation>
+        <source>Unable to bind to %s on this computer. Zoom is probably already running.</source>
+        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. Zoom juba töötab.</translation>
     </message>
     <message>
         <location line="+64"/>

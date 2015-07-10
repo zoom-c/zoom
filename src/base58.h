@@ -272,7 +272,7 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 103, // iEuro addresses start with i
+        PUBKEY_ADDRESS = 103, // Zoom addresses start with i
         SCRIPT_ADDRESS = 92,  // script addresses start with e
         PUBKEY_ADDRESS_TEST = 74,
         SCRIPT_ADDRESS_TEST = 196,

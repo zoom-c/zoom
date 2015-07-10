@@ -1,5 +1,5 @@
 ---
-name: "ieuro"
+name: "zoom"
 suites:
 - "precise"
 architectures:
@@ -81,5 +81,5 @@ script: |
   done
   #
   cd $STAGING
-  find include lib bin host | sort | zip -X@ $OUTDIR/ieuro-deps-linux${GBUILD_BITS}-gitian-r2.zip
+  find include lib bin host | sort | zip -X@ $OUTDIR/zoom-deps-linux${GBUILD_BITS}-gitian-r2.zip
 

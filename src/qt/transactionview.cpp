@@ -132,7 +132,7 @@ TransactionView::TransactionView(QWidget *parent) :
     QAction *copyTxIDAction = new QAction(tr("Copy transaction ID"), this);
     QAction *editLabelAction = new QAction(tr("Edit label"), this);
     QAction *showDetailsAction = new QAction(tr("Show transaction details"), this);
-    QAction *viewOniEuroExplorerAction = new QAction(tr("View on iEuroExplorer"), this);
+    QAction *viewOnZoomExplorerAction = new QAction(tr("View on ZoomExplorer"), this);
 
     contextMenu = new QMenu();
     contextMenu->addAction(copyAddressAction);
@@ -141,7 +141,7 @@ TransactionView::TransactionView(QWidget *parent) :
     contextMenu->addAction(copyTxIDAction);
     contextMenu->addAction(editLabelAction);
     contextMenu->addAction(showDetailsAction);
-    contextMenu->addAction(viewOniEuroExplorerAction);
+    contextMenu->addAction(viewOnZoomExplorerAction);
 
     // Connect actions
     connect(dateWidget, SIGNAL(activated(int)), this, SLOT(chooseDate(int)));
@@ -158,7 +158,7 @@ TransactionView::TransactionView(QWidget *parent) :
     connect(copyTxIDAction, SIGNAL(triggered()), this, SLOT(copyTxID()));
     connect(editLabelAction, SIGNAL(triggered()), this, SLOT(editLabel()));
     connect(showDetailsAction, SIGNAL(triggered()), this, SLOT(showDetails()));
-    connect(viewOniEuroExplorerAction, SIGNAL(triggered()), this, SLOT(viewOniEuroExplorer()));
+    connect(viewOnZoomExplorerAction, SIGNAL(triggered()), this, SLOT(viewOnZoomExplorer()));
 }
 
 void TransactionView::setModel(WalletModel *model)
@@ -388,12 +388,12 @@ void TransactionView::showDetails()
     }
 }
 
-void TransactionView::viewOniEuroExplorer()
+void TransactionView::viewOnZoomExplorer()
 {
     QModelIndexList selection = transactionView->selectionModel()->selectedRows();
     if(!selection.isEmpty())
     {
-        QString format("https://chain.euros.international/tx/");
+        QString format("https://chain.ZoomCoin.co/tx/");
         format += selection.at(0).data(TransactionTableModel::TxIDRole).toString();
 
         QDesktopServices::openUrl(QUrl(format));

@@ -1,20 +1,20 @@
-This directory contains files used to package ieurod/ieuro-qt
+This directory contains files used to package zoomd/zoom-qt
 for Debian-based Linux systems.
 
-If you compile ieurod/ieuro-qt yourself, there are some
+If you compile zoomd/zoom-qt yourself, there are some
 useful files here:
 
-ieuro: URI support
+zoom: URI support
 --------------------
 
-ieuro-qt.desktop  (Gnome / Open Desktop)
+zoom-qt.desktop  (Gnome / Open Desktop)
 To install:
-  sudo desktop-file-install ieuro-qt.desktop
+  sudo desktop-file-install zoom-qt.desktop
   sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your ieuro-qt binary to /usr/bin
-and the ../../share/pixmaps/ieuro128.png to /usr/share/pixmaps
+the .desktop file or copy or symlink your zoom-qt binary to /usr/bin
+and the ../../share/pixmaps/zoom128.png to /usr/share/pixmaps
 
-ieuro-qt.protocol (KDE)
+zoom-qt.protocol (KDE)
 

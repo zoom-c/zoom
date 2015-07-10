@@ -24,7 +24,7 @@ if cmd == "backupwallet":
 
 elif cmd == "getaccount":
 	try:
-		addr = raw_input("Enter a iEuro address: ")
+		addr = raw_input("Enter a Zoom address: ")
 		print access.getaccount(addr)
 	except:
 		print "\n---An error occurred---\n"

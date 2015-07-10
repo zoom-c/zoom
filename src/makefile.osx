@@ -161,10 +161,10 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-all: ieurod
+all: zoomd
 
-test check: test_ieuro FORCE
-	./test_ieuro
+test check: test_zoom FORCE
+	./test_zoom
 
 #
 # LevelDB support
@@ -203,7 +203,7 @@ obj/%.o: %.cpp
 Lyra2RE/%.o: Lyra2RE/%.c
 	$(CC) -c -O3 -o $@ $<
 
-ieurod: $(OBJS:obj/%=obj/%)
+zoomd: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -215,11 +215,11 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_ieuro: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_zoom: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) $(TESTLIBS)
 
 clean:
-	-rm -f ieurod test_ieuro
+	-rm -f zoomd test_zoom
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P

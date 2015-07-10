@@ -1,14 +1,14 @@
-# bash programmable completion for ieurod(1)
+# bash programmable completion for zoomd(1)
 # Copyright (c) 2012 Christian von Roques <roques@mti.ag>
 # Copyright (c) 2014 Vertcoin Developers
-# Copyright (c) 2015 iEuro Developers
+# Copyright (c) 2015 Zoom Developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-have ieurod && {
+have zoomd && {
 
-# call $ieurod for RPC
-_ieuro_rpc() {
+# call $zoomd for RPC
+_zoom_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -18,23 +18,23 @@ _ieuro_rpc() {
                 ;;
         esac
     done
-    $ieurod "${rpcargs[@]}" "$@"
+    $zoomd "${rpcargs[@]}" "$@"
 }
 
-# Add ieuro accounts to COMPREPLY
-_ieuro_accounts() {
+# Add zoom accounts to COMPREPLY
+_zoom_accounts() {
     local accounts
-    accounts=$(_ieuro_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
+    accounts=$(_zoom_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_ieurod() {
+_zoomd() {
     local cur prev words=() cword
-    local ieurod
+    local zoomd
 
-    # save and use original argument to invoke ieurod
-    # ieurod might not be in $PATH
-    ieurod="$1"
+    # save and use original argument to invoke zoomd
+    # zoomd might not be in $PATH
+    zoomd="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -46,7 +46,7 @@ _ieurod() {
                 return 0
                 ;;
             move|setaccount)
-                _ieuro_accounts
+                _zoom_accounts
                 return 0
                 ;;
         esac
@@ -62,7 +62,7 @@ _ieurod() {
             return 0
             ;;
         getaccountaddress|getaddressesbyaccount|getbalance|getnewaddress|getreceivedbyaccount|listtransactions|move|sendfrom|sendmany)
-            _ieuro_accounts
+            _zoom_accounts
             return 0
             ;;
     esac
@@ -86,12 +86,12 @@ _ieurod() {
 
             # only parse --help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($ieurod --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($zoomd --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
-                commands=$(_ieuro_rpc help 2>/dev/null | awk '{ print $1; }')
+                commands=$(_zoom_rpc help 2>/dev/null | awk '{ print $1; }')
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -105,7 +105,7 @@ _ieurod() {
     esac
 }
 
-complete -F _ieurod ieurod
+complete -F _zoomd zoomd
 }
 
 # Local variables:

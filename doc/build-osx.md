@@ -1,4 +1,4 @@
-Mac OS X ieurod build instructions
+Mac OS X zoomd build instructions
 ====================================
 
 Authors
@@ -26,7 +26,7 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building iEuro-Qt, the
+See `doc/readme-qt.rst` for instructions on building Zoom-Qt, the
 graphical user interface.
 
 Tested on OS X 10.5 through 10.8 on Intel processors only. PPC is not
@@ -72,14 +72,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `ieurod`
+### Building `zoomd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:ieuro-project/ieuro.git ieuro
-        cd ieuro
+        git clone git@github.com:zoom-project/zoom.git zoom
+        cd zoom
 
-2.  Build ieurod:
+2.  Build zoomd:
 
         cd src
         make -f makefile.osx
@@ -107,12 +107,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `ieurod`
+### Building `zoomd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:ieuro-project/ieuro.git ieuro
-        cd ieuro
+        git clone git@github.com:zoom-project/zoom.git zoom
+        cd zoom
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -122,7 +122,7 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-3.  Build ieurod:
+3.  Build zoomd:
 
         cd src
         make -f makefile.osx
@@ -134,8 +134,8 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A ieurod binary is not included in the iEuro-Qt.app bundle. You can ignore
-this section if you are building `ieurod` for your own use.
+A zoomd binary is not included in the Zoom-Qt.app bundle. You can ignore
+this section if you are building `zoomd` for your own use.
 
 If you are building `litecond` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -156,30 +156,30 @@ As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
 Download `http://gavinandresen-bitcoin.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of iEuro-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of Zoom-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `iEuro-Qt.app` is easy:
+Once dependencies are compiled, creating `Zoom-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
 Running
 -------
 
-It's now available at `./ieurod`, provided that you are still in the `src`
+It's now available at `./zoomd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./ieurod` to get the filename where it should be put, or just try these
+Run `./zoomd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=ieurorpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/iEuro/ieuro.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/iEuro/ieuro.conf"
+    echo -e "rpcuser=zoomrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Zoom/zoom.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Zoom/zoom.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./ieurod --help  # for a list of command-line options.
-    ./ieurod -daemon # to start the ieuro daemon.
-    ./ieurod help    # When the daemon is running, to get a list of RPC commands
+    ./zoomd --help  # for a list of command-line options.
+    ./zoomd -daemon # to start the zoom daemon.
+    ./zoomd help    # When the daemon is running, to get a list of RPC commands
