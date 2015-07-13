@@ -2961,7 +2961,7 @@ bool InitBlockIndex() {
     if (!fReindex) {
 
         // Genesis block
-        const char* pszTimestamp = "Mon Jun 8 2015 - Zoom";
+        const char* pszTimestamp = "Mon Jun 8 2015 - iEuro";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
