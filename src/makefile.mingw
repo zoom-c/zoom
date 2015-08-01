@@ -22,7 +22,7 @@ USE_UPNP:=1
 USE_IPV6:=1
 
 DEPSDIR?=/usr/local
-BOOST_SUFFIX?=-mgw49-mt-s-1_52
+BOOST_SUFFIX?=-mgw48-mt-1_57
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
@@ -62,7 +62,7 @@ DEFS=-D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 DEBUGFLAGS=-g
 CFLAGS= -mthreads -O2 -std=c++0x -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 # enable: ASLR, DEP and large address aware
-LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware -static
+LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat -static
 
 TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
 
@@ -123,7 +123,9 @@ OBJS= \
     Lyra2RE/blake.o \
     Lyra2RE/groestl.o \
     Lyra2RE/keccak.o \
-    Lyra2RE/skein.o
+    Lyra2RE/skein.o \
+    Lyra2RE/cubehash.o \
+    Lyra2RE/bmw.o
 
 ifdef USE_SSE2
 DEFS += -DUSE_SSE2

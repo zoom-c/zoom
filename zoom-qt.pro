@@ -1,18 +1,14 @@
 TEMPLATE = app
 TARGET = zoom-qt
 macx:TARGET = "Zoom-Qt"
-VERSION = 0.9.0.2
+VERSION = 0.10.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-
-macx: QMAKE_CC=x86_64-apple-darwin14-clang
-macx: QMAKE_CXX=x86_64-apple-darwin14-clang++
-macx: QMAKE_RANLIB=x86_64-apple-darwin14-ranlib
-macx: QMAKE_AR=x86_64-apple-darwin14-ar
+CONFIG += static
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
@@ -21,25 +17,26 @@ macx: QMAKE_AR=x86_64-apple-darwin14-ar
 # or when linking against a specific BerkelyDB version: BDB_LIB_SUFFIX=-4.8
 
 # Dependency library locations can be customized with:
-#    SECP_INCLUDE_PATH, SECP_LIB_PATH, GMP_INCLUDE_PATH, GMP_LIB_PATH,
+#    SECP_INCLUDE_PATH, SECP_LIB_PATH, GMP_INCLUDE_PATH, GMP_LIB_PATH, 
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
-SECP_INCLUDE_PATH=secp256k1/include
-SECP_LIB_PATH=secp256k1/.libs
-GMP_INCLUDE_PATH=/usr/local/include
-GMP_LIB_PATH=/usr/local/lib
-win32: BOOST_LIB_SUFFIX=-mt
-win32: BOOST_THREAD_LIB_SUFFIX=_win32-mt
-BOOST_INCLUDE_PATH=/usr/local/include
-BOOST_LIB_PATH=/usr/local/lib
-BDB_INCLUDE_PATH=/usr/local/include/db48
-BDB_LIB_PATH=/usr/local/lib/db48
-OPENSSL_INCLUDE_PATH=//usr/local/include
-OPENSSL_LIB_PATH=/usr/local/lib
-MINIUPNPC_INCLUDE_PATH=/usr/local/include
-MINIUPNPC_LIB_PATH=/usr/local/lib
-QRENCODE_INCLUDE_PATH=/usr/local/include
-QRENCODE_LIB_PATH=/usr/local/lib
+win32 {
+	SECP_INCLUDE_PATH=c:/deps/secp256k1
+	SECP_LIB_PATH=c:/deps/secp256k1/.libs
+	GMP_INCLUDE_PATH=c:/deps/gmp-6.0.0
+	GMP_LIB_PATH=c:/deps/gmp-6.0.0/.libs
+	BOOST_LIB_SUFFIX=-mgw49-mt-s-1_52
+	BOOST_INCLUDE_PATH=C:/deps/boost_1_52_0
+	BOOST_LIB_PATH=C:/deps/boost_1_52_0/stage/lib
+	BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+	BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+	OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1j/include
+	OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1j
+	MINIUPNPC_INCLUDE_PATH=C:/deps/
+	MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+	QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
+	QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
+}
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -47,10 +44,11 @@ UI_DIR = build
 
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
-    # Mac: compile for maximum compatibility (10.5, 32-bit)
-    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.10 -arch x86_64 -isysroot /usr/local/SDK/MacOSX10.10.sdk
-    macx:QMAKE_CFLAGS += -mmacosx-version-min=10.10 -arch x86_64 -isysroot /usr/local/SDK/MacOSX10.10.sdk
-    macx:QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.10 -arch x86_64 -isysroot /usr/local/SDK/MacOSX10.10.sdk
+    # Mac: compile for maximum compatibility (10.8, 32-bit)
+    macx:QMAKE_CXXFLAGS += -stdlib=libc++ -mmacosx-version-min=10.8 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+    macx:QMAKE_CFLAGS += -mmacosx-version-min=10.8 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+    macx:QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.8 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+
     !win32:!macx {
         # Linux: static link and extra security (see: https://wiki.debian.org/Hardening)
         LIBS += -Wl,-Bstatic -Wl,-z,relro -Wl,-z,now
@@ -66,12 +64,12 @@ contains(RELEASE, 1) {
 }
 
 # for extra security (see: https://wiki.debian.org/Hardening): this flag is GCC compiler-specific
-macx:QMAKE_CXXFLAGS += -DOS_MACOSX -I/usr/local/SDK/MacOSX10.10.sdk/usr/include
-QMAKE_CXXFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2  -std=c++11
+QMAKE_CXXFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -std=c++0x
+#QMAKE_CXXFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 # on Windows: enable GCC large address aware linker flag
-#win32:QMAKE_LFLAGS *= -W1,-static
+win32:QMAKE_LFLAGS *= -static -fexceptions
 # i686-w64-mingw32
 win32:QMAKE_LFLAGS *= -static-libgcc -static-libstdc++
 
@@ -126,17 +124,16 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
 
 INCLUDEPATH += src/leveldb/include src/leveldb/helpers
 LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
-macx: BDBDEF += -DOS_MACOSX -DLEVELDB_PLATFORM_POSIX
 !win32 {
     # we use QMAKE_CXXFLAGS_RELEASE even without RELEASE=1 because we use RELEASE to indicate linking preferences not -O preferences
-    genleveldb.commands = cd $$PWD/src/leveldb && CXXFLAGS=\"$$BDBDEF\" CC=$$QMAKE_CC CXX=$$QMAKE_CXX $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a
+    genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a
 } else {
     # make an educated guess about what the ranlib command is called
     isEmpty(QMAKE_RANLIB) {
         QMAKE_RANLIB = $$replace(QMAKE_STRIP, strip, ranlib)
     }
     LIBS += -lshlwapi
-    genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
+    #genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
 }
 genleveldb.target = $$PWD/src/leveldb/libleveldb.a
 genleveldb.depends = FORCE
@@ -250,12 +247,14 @@ HEADERS += src/qt/bitcoingui.h \
     src/stealth.h \
     src/Lyra2RE/Lyra2.h \
     src/Lyra2RE/Lyra2RE.h \
-    src/Lyra2RE/Sponge.c \
+    src/Lyra2RE/Sponge.h \
     src/Lyra2RE/sph_blake.h \
     src/Lyra2RE/sph_groestl.h \
     src/Lyra2RE/sph_keccak.h \
     src/Lyra2RE/sph_skein.h \
-    src/Lyra2RE/sph_types.h
+    src/Lyra2RE/sph_types.h \
+    src/Lyra2RE/sph_cubehash.h \
+    src/Lyra2RE/sph_bmw.h
 
 
 SOURCES += src/qt/bitcoin.cpp \
@@ -335,7 +334,9 @@ SOURCES += src/qt/bitcoin.cpp \
     src/Lyra2RE/blake.c \
     src/Lyra2RE/skein.c \
     src/Lyra2RE/groestl.c \
-    src/Lyra2RE/keccak.c
+    src/Lyra2RE/keccak.c \
+    src/Lyra2RE/cubehash.c \
+    src/Lyra2RE/bmw.c
 
 
 RESOURCES += src/qt/bitcoin.qrc
@@ -380,7 +381,7 @@ SOURCES_SSE2 += src/scrypt-sse2.cpp
 }
 
 # Todo: Remove this line when switching to Qt5, as that option was removed
-#CODECFORTR = UTF-8
+CODECFORTR = UTF-8
 
 # for lrelease/lupdate
 # also add new translations to src/qt/bitcoin.qrc under translations/
