@@ -4812,7 +4812,7 @@ void static ZoomMiner(CWallet *pwallet)
 
             loop
             {
-                if((fTestNet && pindexPrev->nHeight+1 >= 127000) || pindexPrev->nHeight+1 >= 347000)
+                if((fTestNet && pindexPrev->nHeight+1 >= 0) || pindexPrev->nHeight+1 >= 50000)
                 {
                     lyra2re2_hash(BEGIN(pblock->nVersion), BEGIN(thash));
                 }
