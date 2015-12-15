@@ -1168,6 +1168,7 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
     {"seed.ZoomCoin.co", "seed.ZoomCoin.co"},
+    {"45.32.199.52", "45.32.199.52"},
     {NULL, NULL}
 };
 
@@ -1218,7 +1219,7 @@ void ThreadDNSAddressSeed()
 
 
 
-unsigned int pnSeed[] = {0x39f5372d};
+unsigned int pnSeed[] = {0x34c7202d, 0x6c753d6c};
 
 void DumpAddresses()
 {
